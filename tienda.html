@@ -1,19 +1,34 @@
-﻿<!DOCTYPE html>
-<html lang="es" dir="ltr">
+<!DOCTYPE html>
+<html lang="es-CO" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pines Metálicos Kawaii | KatePin - Tienda Online Colombia</title>
-  <meta name="description" content="Explora nuestra colección completa de pines metálicos esmaltados kawaii. Filtra por categoría, precio, material y color. Envíos a toda Colombia.">
+  <title>Pines Metálicos Kawaii Colombia | Tienda KatePin</title>
+  <meta name="description" content="Explora la colección completa de pines metálicos esmaltados kawaii de KatePin. Animales, fantasía, flores y más. Filtra por precio y material. Envíos a toda Colombia.">
   <meta name="keywords" content="pines metálicos, pines esmaltados, pines kawaii, comprar pines Colombia, KatePin tienda">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://www.katepin.com/tienda">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Tienda de Pines Kawaii | KatePin">
-  <meta property="og:description" content="Colección completa de pines metálicos esmaltados kawaii. Envíos a toda Colombia.">
+  
+  <link rel="canonical" href="https://www.katepin.com/tienda.html">
+  
+  <meta property="og:title" content="Pines Metálicos Kawaii Colombia | Tienda KatePin">
+  <meta property="og:description" content="Colección completa de pines metálicos esmaltados kawaii. Filtra por categoría, precio y material. Envíos a toda Colombia.">
   <meta property="og:image" content="https://www.katepin.com/img/hero-banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tienda de pines metálicos kawaii KatePin Colombia">
+  <meta property="og:url" content="https://www.katepin.com/tienda.html">
+  <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CO">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Tienda KatePin","description":"Colección completa de pines metálicos kawaii","url":"https://www.katepin.com/tienda","isPartOf":{"@type":"WebSite","name":"KatePin","url":"https://www.katepin.com"}}</script>
+  <meta property="og:site_name" content="KatePin">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pines Metálicos Kawaii Colombia | Tienda KatePin">
+  <meta name="twitter:description" content="Colección completa de pines metálicos esmaltados kawaii. Envíos a toda Colombia.">
+  <meta name="twitter:image" content="https://www.katepin.com/img/hero-banner.png">
+  <meta name="twitter:image:alt" content="Tienda de pines metálicos kawaii KatePin">
+  <meta name="twitter:site" content="@katepin">
+
+  <link rel="preload" href="img/logo1.png?v=2" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -41,6 +56,7 @@
   <!-- HEADER -->
   <header class="header" role="banner">
     <div class="header-inner">
+      <nav aria-label="Navegación principal">
       <ul class="nav-left" role="menubar">
         <li role="none" class="has-dropdown">
           <a href="tienda.html" role="menuitem">Tienda ▾</a>
@@ -74,8 +90,9 @@
         <li role="none"><a href="nosotros.html" role="menuitem">Nosotros</a></li>
         <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
       </ul>
+      </nav>
       <a href="index.html" class="logo" aria-label="Inicio">
-        <img src="img/logo1.png?v=2" alt="KatePin Logo" class="logo-img">
+        <img src="img/logo1.png?v=2" alt="KatePin Logo" class="logo-img" width="160" height="50">
       </a>
       <div class="nav-right-group">
         <ul class="nav-right" role="menubar">
@@ -96,7 +113,7 @@
       </div>
       <button class="menu-toggle" id="menu-toggle" aria-label="Menú">☰</button>
     </div>
-    <nav class="mobile-nav" id="mobile-nav">
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
       <a href="tienda.html">Tienda</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
@@ -108,7 +125,7 @@
   <main class="store" role="main">
     <!-- SIDEBAR -->
     <aside class="store-sidebar" id="store-sidebar" aria-label="Filtros">
-      <h1 class="store-title">Tienda</h1>
+      <h1 class="store-title">Tienda de Pines Metálicos Kawaii</h1>
 
       <nav class="sidebar-cats" aria-label="Categorías">
         <a href="#" class="cat-link active" data-cat="todos">Todo</a>
@@ -206,8 +223,23 @@
     <!-- PRODUCT CONTENT -->
     <section class="store-content" aria-label="Productos">
       <div class="store-topbar">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html">Home</a> › <a href="tienda.html">Pines</a> › <span id="breadcrumb-cat">Todos</span>
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style:none; padding:0; margin:0; display:flex; gap:0.5rem;">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="https://www.katepin.com/"><span itemprop="name">Home</span></a>
+              <meta itemprop="position" content="1">
+            </li>
+            <li>›</li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="https://www.katepin.com/tienda.html"><span itemprop="name">Pines</span></a>
+              <meta itemprop="position" content="2">
+            </li>
+            <li>›</li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <span itemprop="name" id="breadcrumb-cat">Todos</span>
+              <meta itemprop="position" content="3">
+            </li>
+          </ol>
         </nav>
         <div class="sort-control">
           <label for="sort-select">Ordenar por:</label>
@@ -234,12 +266,12 @@
   <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="footer-wave">
-      <img src="img/footer.png" alt="" aria-hidden="true" class="footer-wave-img">
+      <img src="img/footer.png" alt="" aria-hidden="true" class="footer-wave-img" loading="lazy">
     </div>
     <div class="footer-content">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="img/logo1.png" alt="KatePin" class="footer-logo-img">
+          <p><img src="img/logo1.png" alt="KatePin — Pines Metálicos Kawaii Colombia" class="footer-logo-img" width="160" height="50"></p>
           <p class="footer-copy-text">&copy; 2026 KatePin<br>Todos los derechos<br>reservados.</p>
         </div>
         <div class="footer-col">
@@ -247,20 +279,20 @@
           <a href="nosotros.html">Quiénes somos</a>
           <a href="faq.html">FAQ</a>
           <a href="#">Envíos a toda Colombia</a>
-          <img src="img/nequi.png" alt="Nequi" style="height:22px; margin-top:12px; filter:brightness(0) invert(1);">
+          <img src="img/nequi.png" alt="Pago con Nequi disponible en KatePin" width="80" height="30" loading="lazy" style="height:22px; margin-top:12px; filter:brightness(0) invert(1);">
         </div>
         <div class="footer-col">
           <h4>Contacto</h4>
           <a href="tel:+573136655918">313 665 5918</a>
           <a href="#">Escríbenos y síguenos</a>
           <div class="footer-social">
-            <a href="https://facebook.com/katepin" target="_blank" rel="noopener" aria-label="Facebook">
+            <a href="https://www.facebook.com/katepin" target="_blank" rel="noopener noreferrer" aria-label="KatePin en Facebook">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
             </a>
-            <a href="https://instagram.com/katepin" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://www.instagram.com/katepin" target="_blank" rel="noopener noreferrer" aria-label="KatePin en Instagram">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
-            <a href="https://tiktok.com/@katepin" target="_blank" rel="noopener" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@katepin" target="_blank" rel="noopener noreferrer" aria-label="KatePin en TikTok">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.11V9a6.33 6.33 0 00-.79-.05A6.34 6.34 0 003.15 15.3a6.34 6.34 0 0010.86-4.43V7.56a8.28 8.28 0 004.86 1.57V5.68a4.84 4.84 0 01-.72-.05l-.56.06z"/></svg>
             </a>
           </div>
@@ -320,5 +352,48 @@
 
   <script src="app.js?v=2"></script>
   <script src="tienda.js?v=2"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KatePin",
+    "alternateName": "KatePin Store",
+    "url": "https://www.katepin.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.katepin.com/img/logo1.png",
+      "width": 200,
+      "height": 60
+    },
+    "description": "Tienda online colombiana de pines metálicos esmaltados kawaii. Diseños exclusivos, envíos a toda Colombia.",
+    "foundingDate": "2024",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Colombia"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CO",
+      "addressLocality": "Colombia"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+57-313-665-5918",
+        "contactType": "customer service",
+        "contactOption": "TollFree",
+        "availableLanguage": "Spanish",
+        "areaServed": "CO"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/katepin",
+      "https://www.instagram.com/katepin",
+      "https://www.tiktok.com/@katepin"
+    ],
+    "email": "hola@katepin.com",
+    "telephone": "+573136655918"
+  }
+  </script>
 </body>
 </html>

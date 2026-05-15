@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Bloquear páginas que no deben indexarse
+Disallow: /login.html
+Disallow: /registro.html
+Disallow: /deseos.html
+Disallow: /cart
+Disallow: /?q=
+
+# Referencia al sitemap
+Sitemap: https://www.katepin.com/sitemap.xml

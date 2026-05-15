@@ -1,9 +1,34 @@
-﻿<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="es-CO" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre Nosotros | KatePin</title>
+  <title>Sobre Nosotros | KatePin Colombia - Nuestra Historia Kawaii</title>
+  <meta name="description" content="Conoce la historia detrás de KatePin. Somos tu tienda online en Colombia dedicada a traer lo mejor de la tendencia cute asiática, kawaii y aesthetic.">
+  <meta name="keywords" content="sobre nosotros KatePin, historia KatePin, tienda kawaii Colombia, accesorios aesthetic">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  
+  <link rel="canonical" href="https://www.katepin.com/nosotros.html">
+
+  <meta property="og:title" content="Sobre Nosotros | KatePin Colombia - Nuestra Historia Kawaii">
+  <meta property="og:description" content="Descubre cómo nació KatePin y nuestra pasión por traer la moda kawaii y aesthetic a toda Colombia.">
+  <meta property="og:image" content="https://www.katepin.com/img/nosotras.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Equipo fundador de KatePin">
+  <meta property="og:url" content="https://www.katepin.com/nosotros.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="KatePin">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sobre Nosotros | KatePin Colombia">
+  <meta name="twitter:description" content="Conoce la historia detrás de tu tienda kawaii favorita en Colombia.">
+  <meta name="twitter:image" content="https://www.katepin.com/img/nosotras.png">
+  <meta name="twitter:image:alt" content="Equipo fundador de KatePin">
+  <meta name="twitter:site" content="@katepin">
+
+  <link rel="preload" href="img/nosotras.png" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -106,6 +131,7 @@
   <!-- HEADER -->
   <header class="header" role="banner">
     <div class="header-inner">
+      <nav aria-label="Navegación principal">
       <ul class="nav-left" role="menubar">
         <li role="none" class="has-dropdown">
           <a href="tienda.html" role="menuitem">Tienda ▾</a>
@@ -139,8 +165,9 @@
         <li role="none"><a href="nosotros.html" role="menuitem" style="color:var(--kp-pink);">Nosotros</a></li>
         <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
       </ul>
+      </nav>
       <a href="index.html" class="logo" aria-label="KatePin - Inicio">
-        <img src="img/logo1.png" alt="KatePin" class="logo-img">
+        <img src="img/logo1.png" alt="KatePin" class="logo-img" width="160" height="50">
       </a>
       <div class="nav-right-group">
         <ul class="nav-right" role="menubar">
@@ -163,7 +190,7 @@
       </div>
       <button class="menu-toggle" id="menu-toggle" aria-label="Menú">☰</button>
     </div>
-    <nav class="mobile-nav" id="mobile-nav">
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
       <a href="tienda.html">Tienda</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
@@ -175,16 +202,16 @@
     <!-- LEFT: Image -->
     <div class="nosotros-left">
       <div class="nosotros-img-container">
-        <img src="img/nosotras.png" alt="Nosotras KatePin">
+        <img src="img/nosotras.png" alt="Fundadoras de KatePin - Tienda de moda y accesorios kawaii en Colombia" width="600" height="600">
       </div>
     </div>
 
     <!-- RIGHT: Content -->
     <div class="nosotros-right">
       <div class="nosotros-header">
-        <h1>
+        <h1 style="margin:0; font-size:inherit; font-weight:inherit; font-family:inherit; color:inherit; display:flex; align-items:center; gap:15px;">
           ¡Bienvenid@ a KatePin!
-          <img src="img/cruz1.png" alt="" class="header-deco">
+          <img src="img/cruz1.png" alt="Icono decorativo" class="header-deco" width="45" height="45">
         </h1>
         <div class="nosotros-intro-text">
           <p>Somos una tienda online colombiana de artículos lindos inspirados en la <span class="highlight">tendencia cute asiática</span>, tan difícil de encontrar en Colombia.</p>
@@ -196,14 +223,14 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="footer-wave">
-      <img src="img/footer.png" alt="" aria-hidden="true" class="footer-wave-img">
+      <img src="img/footer.png" alt="" aria-hidden="true" class="footer-wave-img" loading="lazy">
     </div>
     <div class="footer-content">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="img/logo1.png" alt="KatePin" class="footer-logo-img">
+          <p><img src="img/logo1.png" alt="KatePin — Tienda Kawaii Colombia" class="footer-logo-img" width="160" height="50"></p>
           <p class="footer-copy-text">&copy; 2026 KatePin<br>Todos los derechos<br>reservados.</p>
         </div>
         <div class="footer-col">
@@ -211,7 +238,7 @@
           <a href="tienda.html">Tienda</a>
           <a href="nosotros.html">Nosotros</a>
           <a href="colecciones.html">Colecciones</a>
-          <img src="img/nequi.png" alt="Nequi" style="height:22px; margin-top:12px; filter:brightness(0) invert(1);">
+          <img src="img/nequi.png" alt="Pago con Nequi disponible en KatePin" width="80" height="30" loading="lazy" style="height:22px; margin-top:12px; filter:brightness(0) invert(1);">
         </div>
         <div class="footer-col">
           <h4>Ayuda</h4>
@@ -223,7 +250,7 @@
           <h4>Boletín</h4>
           <p class="footer-boletin-desc">Entérate de nuestras novedades y ofertas especiales.</p>
           <form class="newsletter-input" id="newsletter-form">
-            <input type="email" placeholder="e-mail" required>
+            <input type="email" placeholder="e-mail" required aria-label="Correo electrónico para boletín">
             <button type="submit">OK</button>
           </form>
         </div>
@@ -232,5 +259,19 @@
   </footer>
 
   <script src="app.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Sobre Nosotros | KatePin",
+    "description": "Conoce la historia detrás de KatePin. Somos tu tienda online en Colombia dedicada a traer lo mejor de la tendencia cute asiática, kawaii y aesthetic.",
+    "url": "https://www.katepin.com/nosotros.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "KatePin",
+      "logo": "https://www.katepin.com/img/logo1.png"
+    }
+  }
+  </script>
 </body>
 </html>

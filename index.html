@@ -1,24 +1,40 @@
-﻿<!DOCTYPE html>
-<html lang="es" dir="ltr">
+<!DOCTYPE html>
+<html lang="es-CO" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KatePin | Pines Metálicos Kawaii - Tienda Online Colombia</title>
-  <meta name="description" content="Tienda online de pines metálicos esmaltados kawaii. Diseños exclusivos de animales, fantasía, flores y más. Envíos a toda Colombia. Paga fácil con Nequi.">
+  <title>KatePin | Pines Metálicos Kawaii · Colombia</title>
+  <meta name="description" content="Tienda online de pines metálicos esmaltados kawaii. Diseños exclusivos de animales, fantasía y flores. Envíos a toda Colombia. ¡Paga fácil con Nequi!">
   <meta name="keywords" content="pines metálicos, pines esmaltados, pines kawaii, pines Colombia, pin metálico, accesorios kawaii, KatePin">
   <meta name="author" content="KatePin">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.katepin.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.katepin.com/">
-  <meta property="og:title" content="KatePin | Pines Metálicos Kawaii">
-  <meta property="og:description" content="Pines metálicos esmaltados kawaii. Diseños únicos, envíos a toda Colombia.">
+  
+  <meta property="og:title" content="KatePin | Pines Metálicos Kawaii · Colombia">
+  <meta property="og:description" content="Tienda online de pines metálicos esmaltados kawaii. Diseños exclusivos, envíos a toda Colombia.">
   <meta property="og:image" content="https://www.katepin.com/img/hero-banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Colección de pines metálicos kawaii KatePin">
+  <meta property="og:url" content="https://www.katepin.com/">
+  <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="KatePin">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KatePin | Pines Metálicos Kawaii">
-  <meta name="twitter:description" content="Tienda online de pines metálicos kawaii en Colombia.">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"KatePin","description":"Tienda online de pines metálicos esmaltados kawaii en Colombia","url":"https://www.katepin.com","priceRange":"$10.000-$20.000 COP","address":{"@type":"PostalAddress","addressCountry":"CO"}}</script>
+  <meta name="twitter:title" content="KatePin | Pines Metálicos Kawaii · Colombia">
+  <meta name="twitter:description" content="Tienda online de pines metálicos esmaltados kawaii. Envíos a toda Colombia.">
+  <meta name="twitter:image" content="https://www.katepin.com/img/hero-banner.png">
+  <meta name="twitter:image:alt" content="Colección de pines metálicos kawaii KatePin">
+  <meta name="twitter:site" content="@katepin">
+
+  <meta name="geo.region" content="CO">
+  <meta name="geo.country" content="Colombia">
+  <meta name="geo.placename" content="Colombia">
+  <meta name="ICBM" content="4.7110, -74.0721">
+
+  <link rel="preload" href="img/logo1.png" as="image">
+  <link rel="preload" href="img/principal.png" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -45,6 +61,7 @@
   <!-- HEADER -->
   <header class="header" role="banner">
     <div class="header-inner">
+      <nav aria-label="Navegación principal">
       <ul class="nav-left" role="menubar">
         <li role="none" class="has-dropdown">
           <a href="tienda.html" role="menuitem">Tienda ▾</a>
@@ -78,8 +95,9 @@
         <li role="none"><a href="nosotros.html" role="menuitem">Nosotros</a></li>
         <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
       </ul>
+      </nav>
       <a href="index.html" class="logo" aria-label="KatePin - Inicio">
-        <img src="img/logo1.png" alt="KatePin" class="logo-img">
+        <img src="img/logo1.png" alt="KatePin" class="logo-img" width="160" height="50">
       </a>
       <div class="nav-right-group">
         <ul class="nav-right" role="menubar">
@@ -102,7 +120,7 @@
       </div>
       <button class="menu-toggle" id="menu-toggle" aria-label="Menú">☰</button>
     </div>
-    <nav class="mobile-nav" id="mobile-nav">
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
       <a href="tienda.html">Tienda</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
@@ -113,9 +131,13 @@
 
   <!-- HERO BANNER -->
   <section class="hero" id="inicio" aria-label="Banner principal">
-    <img src="img/principal.png" alt="Colección de pines metálicos kawaii KatePin" class="hero-banner-img" loading="eager">
+    <picture>
+      <source srcset="img/principal.webp" type="image/webp">
+      <img src="img/principal.png" alt="Colección de pines metálicos kawaii KatePin" class="hero-banner-img" loading="eager" width="800" height="600">
+    </picture>
     <div class="hero-overlay">
-      <h1 class="hero-title">¡Bienvenid@ a<br>KatePin!</h1>
+      <h1 class="hero-title">Pines Metálicos Kawaii en Colombia | KatePin</h1>
+      <p class="hero-welcome-text" style="color:white; text-align:center; margin-bottom:1rem; font-size:1.5rem; font-family:'Delius Swash Caps', cursive;">¡Bienvenid@ a KatePin!</p>
       <div class="hero-divider"></div>
       <a href="tienda.html" class="hero-cta" id="hero-cta">¡Compra ahora!</a>
     </div>
@@ -128,7 +150,7 @@
 
   <!-- WELCOME -->
   <section class="welcome" id="nosotros" aria-label="Bienvenida">
-    <img src="img/foto.png" alt="¡Bienvenid@! Somos una tienda online colombiana especializada en pines metálicos cute y originales, inspirados en lo Kawaii. Equipo de KatePin" class="welcome-banner" loading="lazy">
+    <img src="img/foto.png" alt="Equipo de KatePin — tienda online colombiana de pines kawaii" class="welcome-banner" loading="lazy">
   </section>
 
 
@@ -149,7 +171,7 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="testimonials fade-up" id="testimonios" aria-label="Testimonios">
+  <section class="testimonials fade-up" id="testimonios" aria-label="Testimonios de clientes">
     <div class="testimonials-title">
       <span class="star">✻</span>
       <h2>¡Clientes felices!</h2>
@@ -174,12 +196,12 @@
   <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="footer-wave">
-      <img src="img/footer.png" alt="" aria-hidden="true" class="footer-wave-img">
+      <img src="img/footer.png" alt="" aria-hidden="true" class="footer-wave-img" loading="lazy">
     </div>
     <div class="footer-content">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="img/logo1.png" alt="KatePin" class="footer-logo-img">
+          <p><img src="img/logo1.png" alt="KatePin — Pines Metálicos Kawaii Colombia" class="footer-logo-img" width="160" height="50"></p>
           <p class="footer-copy-text">&copy; 2026 KatePin<br>Todos los derechos<br>reservados.</p>
         </div>
         <div class="footer-col">
@@ -187,20 +209,20 @@
           <a href="nosotros.html">Quiénes somos</a>
           <a href="faq.html">FAQ</a>
           <a href="#">Envíos a toda Colombia</a>
-          <img src="img/nequi.png" alt="Nequi" style="height:22px; margin-top:12px; filter:brightness(0) invert(1);">
+          <img src="img/nequi.png" alt="Pago con Nequi disponible en KatePin" width="80" height="30" loading="lazy" style="height:22px; margin-top:12px; filter:brightness(0) invert(1);">
         </div>
         <div class="footer-col">
           <h4>Contacto</h4>
           <a href="tel:+573136655918">313 665 5918</a>
           <a href="#">Escríbenos y síguenos</a>
           <div class="footer-social">
-            <a href="https://facebook.com/katepin" target="_blank" rel="noopener" aria-label="Facebook">
+            <a href="https://www.facebook.com/katepin" target="_blank" rel="noopener noreferrer" aria-label="KatePin en Facebook">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
             </a>
-            <a href="https://instagram.com/katepin" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://www.instagram.com/katepin" target="_blank" rel="noopener noreferrer" aria-label="KatePin en Instagram">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
-            <a href="https://tiktok.com/@katepin" target="_blank" rel="noopener" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@katepin" target="_blank" rel="noopener noreferrer" aria-label="KatePin en TikTok">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.11V9a6.33 6.33 0 00-.79-.05A6.34 6.34 0 003.15 15.3a6.34 6.34 0 0010.86-4.43V7.56a8.28 8.28 0 004.86 1.57V5.68a4.84 4.84 0 01-.72-.05l-.56.06z"/></svg>
             </a>
           </div>
@@ -259,5 +281,170 @@
   </div>
 
   <script src="app.js?v=2"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KatePin",
+    "alternateName": "KatePin Store",
+    "url": "https://www.katepin.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.katepin.com/img/logo1.png",
+      "width": 200,
+      "height": 60
+    },
+    "description": "Tienda online colombiana de pines metálicos esmaltados kawaii. Diseños exclusivos, envíos a toda Colombia.",
+    "foundingDate": "2024",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Colombia"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CO",
+      "addressLocality": "Colombia"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+57-313-665-5918",
+        "contactType": "customer service",
+        "contactOption": "TollFree",
+        "availableLanguage": "Spanish",
+        "areaServed": "CO"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/katepin",
+      "https://www.instagram.com/katepin",
+      "https://www.tiktok.com/@katepin"
+    ],
+    "email": "hola@katepin.com",
+    "telephone": "+573136655918"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KatePin",
+    "url": "https://www.katepin.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.katepin.com/tienda.html?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "KatePin",
+    "url": "https://www.katepin.com",
+    "image": "https://www.katepin.com/img/hero-banner.png",
+    "description": "Tienda online colombiana de pines metálicos esmaltados kawaii con diseños exclusivos. Envíos a toda Colombia.",
+    "priceRange": "$8.000 - $20.000 COP",
+    "currenciesAccepted": "COP",
+    "paymentAccepted": "Nequi, Daviplata, Transferencia bancaria",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Colombia"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Pines Metálicos Kawaii",
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Pines de Animales"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Pines de Fantasía"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Pines de Flores"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Pines de Comida"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Pines de Personajes"
+        }
+      ]
+    },
+    "telephone": "+573136655918",
+    "email": "hola@katepin.com",
+    "sameAs": [
+      "https://www.facebook.com/katepin",
+      "https://www.instagram.com/katepin",
+      "https://www.tiktok.com/@katepin"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Pines Metálicos Kawaii KatePin",
+    "brand": {
+      "@type": "Brand",
+      "name": "KatePin"
+    },
+    "description": "Pines metálicos esmaltados de diseños kawaii exclusivos. Animales, fantasía, flores y más.",
+    "image": "https://www.katepin.com/img/principal.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "2"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Camila Rodríguez"
+        },
+        "reviewBody": "Los pines son bellísimos, superaron mis expectativas. El empaque estaba precioso y llegaron muy rápido. ¡Ya quiero comprar más!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Valentina García"
+        },
+        "reviewBody": "Me encanta la calidad de los pines. Los detalles son increíbles y los colores super lindos. Los pongo en mi chaqueta y recibo muchos cumplidos."
+      }
+    ]
+  }
+  </script>
 </body>
 </html>
