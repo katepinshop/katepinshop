@@ -1,0 +1,291 @@
+/* Estilos específicos para la página de registro - Proporciones bloqueadas (vw) */
+
+.registro-body {
+  background: url('img/fondocuenta.png?v=4') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1.04vw;
+  background-color: #f7f7f7;
+}
+
+.registro-container {
+  width: 100%;
+  max-width: 25vw; /* 480px / 19.2 */
+}
+
+.registro-card {
+  background: var(--white, #ffffff);
+  padding: 2.6vw 3.1vw; /* 50px 60px */
+  border-radius: 0.2vw;
+  box-shadow: 0 0.5vw 2vw rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.registro-logo {
+  display: inline-block;
+  margin-bottom: 1.04vw; /* 20px */
+}
+
+.registro-logo img {
+  width: 5.2vw; /* 100px */
+  height: auto;
+}
+
+.registro-title {
+  color: var(--hot-pink, #f472b6);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 1.04vw; /* 20px */
+  letter-spacing: 0.05vw;
+  margin-bottom: 0.83vw; /* 16px */
+  text-transform: uppercase;
+}
+
+.registro-desc {
+  font-size: 0.625vw; /* 12px */
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 1.8vw; /* 35px */
+  font-weight: 300;
+}
+
+.registro-form .form-group {
+  margin-bottom: 1.04vw; /* 20px */
+  text-align: left;
+}
+
+.registro-form input {
+  width: 100%;
+  padding: 0.52vw 0; /* 10px 0 */
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.7vw; /* 13.6px */
+  color: #333;
+  font-weight: 300;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+
+.registro-form input::placeholder {
+  color: #b5b5b5;
+  font-weight: 300;
+}
+
+.registro-form input:focus {
+  border-bottom-color: var(--hot-pink, #f472b6);
+}
+
+.registro-buttons {
+  display: flex;
+  gap: 0.78vw; /* 15px */
+  margin-top: 1.8vw; /* 35px */
+  margin-bottom: 1.3vw; /* 25px */
+}
+
+.btn-continuar, .btn-google {
+  flex: 1;
+  padding: 0.62vw 0; /* 12px 0 */
+  border: none;
+  border-radius: 2.6vw; /* 50px */
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 0.66vw; /* 12.8px */
+  letter-spacing: 0.02vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3vw; /* 6px */
+}
+
+.btn-google svg {
+  width: 0.73vw; /* 14px */
+  height: 0.73vw;
+}
+
+.btn-continuar {
+  background-color: var(--hot-pink, #f472b6);
+  color: white;
+}
+
+.btn-continuar:hover {
+  background-color: #e060a2;
+  transform: translateY(-2px);
+}
+
+.btn-google {
+  background-color: #ea4335;
+  color: white;
+}
+
+.btn-google:hover {
+  background-color: #d63c2f;
+  transform: translateY(-2px);
+}
+
+.newsletter-check {
+  margin-top: 1.3vw; /* 25px */
+  text-align: center;
+}
+
+.newsletter-check label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.52vw; /* 10px */
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.625vw; /* 12px */
+  color: #888;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.newsletter-check input {
+  display: none;
+}
+
+.newsletter-check .custom-radio {
+  width: 0.83vw; /* 16px */
+  height: 0.83vw;
+  border-radius: 50%;
+  border: 2px solid var(--hot-pink, #f472b6);
+  display: inline-block;
+  position: relative;
+}
+
+.newsletter-check input:checked + .custom-radio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.41vw; /* 8px */
+  height: 0.41vw;
+  background-color: var(--hot-pink, #f472b6);
+  border-radius: 50%;
+}
+
+.registro-footer {
+  font-size: 0.625vw; /* 12px */
+  color: #888;
+  font-weight: 300;
+}
+
+.registro-footer a {
+  color: var(--hot-pink, #f472b6);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.registro-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos específicos para Iniciar Sesión */
+.login-body {
+  background: url('img/fondoinicio1.png?v=1') no-repeat center center fixed;
+  background-size: cover;
+  padding: 0;
+}
+
+.login-container {
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.login-card {
+  min-height: 100vh;
+  max-width: 28vw;
+  width: 28vw;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw 3.6vw;
+}
+
+.login-form .form-group {
+  margin-bottom: 1.56vw; /* 30px */
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 2.6vw; /* 50px */
+}
+
+.forgot-password a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.52vw; /* 10px */
+  color: #a0a0a0;
+  font-weight: 300;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.forgot-password a:hover {
+  color: var(--hot-pink, #f472b6);
+}
+
+.login-buttons-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.04vw; /* 20px */
+  margin-bottom: 2.08vw; /* 40px */
+}
+
+.login-buttons-stack .btn-continuar, 
+.login-buttons-stack .btn-google {
+  width: 13vw; /* ~250px */
+  flex: none;
+}
+
+.login-separator {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.52vw; /* 10px */
+  color: #888;
+  font-weight: 300;
+  margin: 0.52vw 0; /* 10px */
+}
+
+.login-divider-line {
+  height: 1px;
+  width: calc(100% + 7.2vw); /* Extiende hasta los bordes del card */
+  background-color: #f0f0f0;
+  margin: 0 0 1.56vw 0;
+}
+
+/* Responsividad para móviles (se restauran a px para que no quede diminuto) */
+@media (max-width: 768px) {
+  .registro-container { max-width: 90%; }
+  .registro-card { padding: 30px; border-radius: 8px; }
+  .registro-logo { margin-bottom: 20px; }
+  .registro-logo img { width: 80px; }
+  .registro-title { font-size: 1.2rem; margin-bottom: 15px; }
+  .registro-desc { font-size: 0.8rem; margin-bottom: 25px; }
+  .registro-form .form-group { margin-bottom: 15px; }
+  .registro-form input { padding: 10px 0; font-size: 0.9rem; }
+  .registro-buttons { flex-direction: column; gap: 10px; margin-top: 25px; margin-bottom: 20px; }
+  .btn-continuar, .btn-google { padding: 12px 0; font-size: 0.9rem; border-radius: 25px; gap: 8px; }
+  .btn-google svg { width: 16px; height: 16px; }
+  .newsletter-check { margin-top: 20px; }
+  .newsletter-check label { gap: 10px; font-size: 0.8rem; }
+  .newsletter-check .custom-radio { width: 18px; height: 18px; }
+  .newsletter-check input:checked + .custom-radio::after { width: 10px; height: 10px; }
+  .registro-footer { font-size: 0.8rem; }
+}

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Pin - KatePin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="producto.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📌</text></svg>">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <ul class="nav-left" role="menubar">
+        <li role="none" class="has-dropdown">
+          <a href="tienda.html" role="menuitem" style="color:var(--hot-pink);">Tienda ▾</a>
+          <ul class="dropdown-menu" role="menu">
+            <li role="none" class="has-submenu">
+              <a href="#" role="menuitem">Ropa ▸</a>
+              <ul class="dropdown-submenu" role="menu">
+                <li role="none"><a href="tienda.html#ropa-vestidos" role="menuitem">Vestidos</a></li>
+                <li role="none"><a href="tienda.html#ropa-chaquetas" role="menuitem">Chaquetas</a></li>
+                <li role="none"><a href="tienda.html#ropa-blusas" role="menuitem">Blusas</a></li>
+                <li role="none"><a href="tienda.html#ropa-pantalones" role="menuitem">Pantalones</a></li>
+                <li role="none"><a href="tienda.html#ropa-faldas" role="menuitem">Faldas</a></li>
+              </ul>
+            </li>
+            <li role="none" class="has-submenu">
+              <a href="#" role="menuitem">Accesorios ▸</a>
+              <ul class="dropdown-submenu" role="menu">
+                <li role="none"><a href="tienda.html#accesorios-pines" role="menuitem">Pines</a></li>
+              </ul>
+            </li>
+            <li role="none" class="has-submenu">
+              <a href="#" role="menuitem">Zapatos ▸</a>
+              <ul class="dropdown-submenu" role="menu">
+                <li role="none"><a href="tienda.html#zapatos-sandalias" role="menuitem">Sandalias</a></li>
+                <li role="none"><a href="tienda.html#zapatos-botas" role="menuitem">Botas</a></li>
+                <li role="none"><a href="tienda.html#zapatos-tenis" role="menuitem">Tenis</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li role="none"><a href="nosotros.html" role="menuitem">Nosotros</a></li>
+        <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
+      </ul>
+      <a href="index.html" class="logo" aria-label="KatePin - Inicio">
+        <img src="img/logo1.png" alt="KatePin" class="logo-img">
+      </a>
+      <div class="nav-right-group">
+        <ul class="nav-right" role="menubar">
+          <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
+          <li role="none" class="has-dropdown">
+            <a href="#" role="menuitem">Cuenta ▾</a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="none"><a href="login.html" role="menuitem">Iniciar sesión</a></li>
+              <li role="none"><a href="registro.html" role="menuitem">Registrarme</a></li>
+              <li role="none"><a href="#" role="menuitem">Mensajes</a></li>
+              <li role="none"><a href="#" role="menuitem">Mis pedidos</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header-icons">
+          <button class="icon-btn" id="cart-btn" aria-label="Carrito"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-count" id="cart-count" style="display:none">0</span></button>
+          <a href="deseos.html" id="wishlist-btn" aria-label="Lista de deseos"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></a>
+          <button class="icon-btn" aria-label="Buscar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        </div>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menú">☰</button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="tienda.html">Tienda</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="producto-breadcrumb">
+    <div class="breadcrumb-links">
+      <a href="index.html">Home</a> &gt;
+      <a href="tienda.html">Pines</a> &gt;
+      <span id="breadcrumb-cat">Animales</span> &gt;
+      <strong id="breadcrumb-name">Gatita Rosa</strong>
+    </div>
+    <div class="producto-nav-arrows">
+      <a href="#" id="prev-link">&lsaquo; anterior artículo</a> <span class="divider">|</span> <a href="#" id="next-link">siguiente artículo &rsaquo;</a>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAIL -->
+  <main class="producto-main">
+    <!-- LEFT: Images -->
+    <div class="producto-gallery">
+      <div class="gallery-thumb" id="gallery-thumb">
+        <img src="img/pin-cat-pink.png" alt="Vista 1" class="thumb active" onclick="setMainImage(this.src)">
+        <img src="img/pin-cat-pink.png" alt="Vista 2" class="thumb" onclick="setMainImage(this.src)">
+      </div>
+      <div class="gallery-main">
+        <img src="img/pin-cat-pink.png" alt="Gatita Rosa" id="main-product-img">
+        <div class="gallery-arrows">
+          <button class="gallery-arrow" onclick="prevImage()">&lsaquo;</button>
+          <button class="gallery-arrow" onclick="nextImage()">&rsaquo;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Product Info -->
+    <div class="producto-info">
+      <h1 class="producto-name" id="producto-name">Gatita Rosa</h1>
+      <div class="producto-price" id="producto-price">$12.000</div>
+
+      <div class="producto-divider"></div>
+
+      <!-- MATERIAL -->
+      <div class="producto-option">
+        <span class="option-label">MATERIAL</span>
+        <div class="option-values" id="material-options">
+          <button class="material-btn active" data-value="esmaltado">Esmaltado</button>
+          <button class="material-btn" data-value="acrílico">Acrílico</button>
+        </div>
+      </div>
+
+      <!-- ACABADO -->
+      <div class="producto-option">
+        <span class="option-label">ACABADO</span>
+        <div class="option-values" id="acabado-options">
+          <button class="acabado-swatch active" data-value="oro-rosa" style="background: linear-gradient(135deg, #f7cac9, #e8a09a);" title="Oro Rosa"></button>
+          <button class="acabado-swatch" data-value="oro" style="background: linear-gradient(135deg, #ffd700, #daa520);" title="Oro"></button>
+          <button class="acabado-swatch" data-value="plata" style="background: linear-gradient(135deg, #e8e8e8, #b0b0b0);" title="Plata"></button>
+          <button class="acabado-swatch" data-value="negro" style="background: linear-gradient(135deg, #444, #111);" title="Negro"></button>
+        </div>
+      </div>
+
+      <!-- CANTIDAD -->
+      <div class="producto-option">
+        <span class="option-label">CANTIDAD</span>
+        <div class="cantidad-control">
+          <button class="qty-btn" onclick="changeQty(-1)">−</button>
+          <span class="qty-display" id="qty-display">1</span>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+
+      <!-- BOTONES -->
+      <div class="producto-actions">
+        <a href="deseos.html" class="icon-btn" aria-label="Favoritos"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></a>
+        <button class="btn-add-cart" id="btn-add-cart">AÑADIR A LA CESTA</button>
+      </div>
+
+      <!-- DETALLES -->
+      <div class="producto-details">
+        <div class="detail-row">
+          <span class="detail-icon">📏</span>
+          <span>Tamaño: <strong>3 cm × 2.5 cm</strong></span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-icon">🔒</span>
+          <span>Cierre: <strong>Butterfly clutch</strong></span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-icon">📦</span>
+          <span>Envío: <strong>A toda Colombia</strong></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SECCIÓN DE VALORACIONES Y DETALLES -->
+  <section class="producto-tabs-section">
+    <div class="tabs-header">
+      <div class="tabs-buttons">
+        <button class="tab-btn active" data-target="valoraciones">VALORACIONES <span class="tab-count">83</span></button>
+        <button class="tab-btn" data-target="detalles">DETALLES DEL PRODUCTO</button>
+      </div>
+      <div class="tabs-nav">
+        <button class="tab-nav-btn">&lsaquo;</button>
+        <span class="divider">|</span>
+        <button class="tab-nav-btn">&rsaquo;</button>
+      </div>
+    </div>
+
+    <div class="tab-content active" id="valoraciones">
+      <!-- FORMULARIO DE RESEÑA -->
+      <div class="review-form-container fade-up">
+        <h4>Escribe tu opinión</h4>
+        <form id="review-form" class="review-form">
+          <div class="star-rating" id="star-rating">
+            <span class="star" data-val="1">★</span>
+            <span class="star" data-val="2">★</span>
+            <span class="star" data-val="3">★</span>
+            <span class="star" data-val="4">★</span>
+            <span class="star" data-val="5">★</span>
+          </div>
+          <input type="text" id="review-user" placeholder="Tu nombre (opcional)" aria-label="Nombre">
+          <textarea id="review-text" placeholder="¿Qué te pareció este pin?..." required aria-label="Comentario"></textarea>
+          <button type="submit" class="btn-pink">Enviar reseña 💖</button>
+        </form>
+      </div>
+
+      <!-- LISTA DE RESEÑAS -->
+      <div class="reviews-list" id="reviews-list">
+        <!-- Las reseñas se cargarán dinámicamente desde app.js -->
+        <p class="no-reviews">Cargando opiniones...</p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="detalles">
+      <div class="detalles-placeholder">
+        <p>Aquí se muestran los detalles del producto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN MÁS ARTÍCULOS PARA TI -->
+  <section class="more-items-section">
+    <div class="section-title-container">
+      <span class="decor-diamond">✦</span>
+      <div class="title-line"></div>
+      <h2 class="section-title">MÁS ARTÍCULOS PARA TI</h2>
+      <div class="title-line"></div>
+      <span class="decor-diamond">✦</span>
+    </div>
+
+    <div class="carousel-container">
+      <button class="carousel-arrow prev">&lsaquo;</button>
+      <div class="carousel-track-wrapper">
+        <div class="carousel-track">
+          <!-- Item 1 -->
+          <div class="carousel-item">
+            <div class="item-img-wrapper">
+              <img src="img/pin-unicorn.png" alt="Vestido Fresh">
+              <button class="item-heart">♡</button>
+            </div>
+            <h3 class="item-name">Vestido Fresh</h3>
+            <p class="item-price">S/.60</p>
+          </div>
+          <!-- Item 2 -->
+          <div class="carousel-item">
+            <div class="item-img-wrapper">
+              <img src="img/pin-strawberry.png" alt="Vestido Baby Doll">
+              <button class="item-heart">♡</button>
+            </div>
+            <h3 class="item-name">Vestido Baby Doll</h3>
+            <p class="item-price">S/.55</p>
+          </div>
+          <!-- Item 3 -->
+          <div class="carousel-item">
+            <div class="item-img-wrapper">
+              <img src="img/pin-moon-star.png" alt="Vestido Love Pinafore">
+              <button class="item-heart">♡</button>
+            </div>
+            <h3 class="item-name">Vestido Love Pinafore</h3>
+            <p class="item-price">S/.35</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow next">&rsaquo;</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-wave">
+      <img src="img/footer.png" alt="" aria-hidden="true" class="footer-wave-img">
+    </div>
+    <div class="footer-content">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="img/logo1.png" alt="KatePin" class="footer-logo-img">
+          <p class="footer-copy-text">&copy; 2026 KatePin<br>Todos los derechos<br>reservados.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Sobre nosotros</h4>
+          <a href="nosotros.html">Quiénes somos</a>
+          <a href="faq.html">FAQ</a>
+          <a href="#">Envíos a toda Colombia</a>
+          <img src="img/nequi.png" alt="Nequi" style="height:22px; margin-top:12px; filter:brightness(0) invert(1);">
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="tel:+573136655918">313 665 5918</a>
+          <a href="#">Escríbenos y síguenos</a>
+          <div class="footer-social">
+            <a href="https://facebook.com/katepin" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com/katepin" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://tiktok.com/@katepin" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.11V9a6.33 6.33 0 00-.79-.05A6.34 6.34 0 003.15 15.3a6.34 6.34 0 0010.86-4.43V7.56a8.28 8.28 0 004.86 1.57V5.68a4.84 4.84 0 01-.72-.05l-.56.06z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Boletín</h4>
+          <p class="footer-boletin-desc">Entérate de nuestras novedades, recibe cupones, artículos y ¡mucho más!</p>
+          <form class="newsletter-input" id="newsletter-form">
+            <input type="email" placeholder="dirección de e-mail" required aria-label="Email">
+            <button type="submit">Suscribir</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="app.js?v=3"></script>
+  <script>
+    /* Pin Data (shared with tienda.js) */
+    const ALL_PINS = [
+      {id:"gatita-rosa",name:"Gatita Rosa",price:12000,img:"img/pin-cat-pink.png",cat:"animales",col:"san-valentin",badge:"hot",color:"rosa",material:"oro-rosa"},
+      {id:"unicornio-arcoiris",name:"Unicornio Arcoíris",price:14000,img:"img/pin-unicorn.png",cat:"fantasia",col:"verano",badge:"new",color:"lila",material:"oro"},
+      {id:"fresita-feliz",name:"Fresita Feliz",price:10000,img:"img/pin-strawberry.png",cat:"comida",col:"verano",badge:"sale",color:"coral",material:"oro"},
+      {id:"luna-y-estrellas",name:"Luna y Estrellas",price:13000,img:"img/pin-moon-star.png",cat:"fantasia",col:"halloween",badge:"new",color:"lila",material:"plata"},
+      {id:"conejita-tierna",name:"Conejita Tierna",price:11000,img:"img/pin-bunny.png",cat:"animales",col:"san-valentin",badge:"hot",color:"blanco",material:"oro"},
+      {id:"sakura-bloom",name:"Sakura Bloom",price:12000,img:"img/pin-cherry-blossom.png",cat:"flores",col:"navidad",badge:"new",color:"rosa",material:"oro-rosa"},
+      {id:"corazon-alado",name:"Corazón Alado",price:15000,img:"img/pin-heart-wings.png",cat:"fantasia",col:"san-valentin",badge:"new",color:"rosa",material:"oro"},
+      {id:"nube-arcoiris",name:"Nube Arcoíris",price:11000,img:"img/pin-cloud-rainbow.png",cat:"fantasia",col:"verano",badge:"sale",color:"azul",material:"plata"},
+      {id:"gatita-rosa-mini",name:"Gatita Rosa Mini",price:9000,img:"img/pin-cat-pink.png",cat:"animales",col:"san-valentin",badge:null,color:"rosa",material:"plata"},
+      {id:"unicornio-dorado",name:"Unicornio Dorado",price:16000,img:"img/pin-unicorn.png",cat:"fantasia",col:"navidad",badge:"hot",color:"dorado",material:"oro"},
+      {id:"sakura-dorada",name:"Sakura Dorada",price:13000,img:"img/pin-cherry-blossom.png",cat:"flores",col:"navidad",badge:null,color:"rosa",material:"oro"},
+      {id:"mariposa-monarca",name:"Mariposa Monarca",price:12000,img:"img/pinmariposa.png",cat:"animales",col:"verano",badge:"new",color:"coral",material:"oro"},
+      {id:"mariposa-turquesa",name:"Mariposa Turquesa",price:13000,img:"img/pinmariposa2.png",cat:"animales",col:"verano",badge:null,color:"azul",material:"plata"},
+      {id:"mariposa-nocturna",name:"Mariposa Nocturna",price:14000,img:"img/pinmariposa3.png",cat:"animales",col:"halloween",badge:"hot",color:"negro",material:"plata"},
+      {id:"mariposa-rosa",name:"Mariposa Rosa",price:12000,img:"img/pinmariposa4.png",cat:"animales",col:"san-valentin",badge:"new",color:"rosa",material:"oro-rosa"},
+      {id:"mariposa-esmeralda",name:"Mariposa Esmeralda",price:13000,img:"img/pinmariposa5.png",cat:"animales",col:"navidad",badge:null,color:"verde",material:"oro"},
+      {id:"mariposa-solar",name:"Mariposa Solar",price:14000,img:"img/pinmariposa6.png",cat:"animales",col:"verano",badge:"sale",color:"amarillo",material:"oro"},
+      {id:"mariposa-violeta",name:"Mariposa Violeta",price:12000,img:"img/pinmariposa7.png",cat:"animales",col:"halloween",badge:null,color:"lila",material:"plata"},
+      {id:"mariposa-cristal",name:"Mariposa Cristal",price:15000,img:"img/pinmariposa8.png",cat:"animales",col:"navidad",badge:"hot",color:"blanco",material:"plata"}
+    ];
+
+    /* Load pin from URL hash */
+    const hashParams = new URLSearchParams(window.location.hash.substring(1));
+    const pinId = hashParams.get('id');
+    const pin = ALL_PINS.find(p => p.id === pinId) || ALL_PINS[0];
+    const pinIndex = ALL_PINS.findIndex(p => p.id === pin.id);
+    const prevPin = pinIndex > 0 ? ALL_PINS[pinIndex - 1] : ALL_PINS[ALL_PINS.length - 1];
+    const nextPin = pinIndex < ALL_PINS.length - 1 ? ALL_PINS[pinIndex + 1] : ALL_PINS[0];
+
+    /* Populate page */
+    document.getElementById('producto-name').textContent = pin.name;
+    document.getElementById('producto-price').textContent = '$' + pin.price.toLocaleString('es-CO');
+    document.getElementById('main-product-img').src = pin.img;
+    document.getElementById('main-product-img').alt = pin.name;
+    document.getElementById('breadcrumb-name').textContent = pin.name;
+    document.getElementById('breadcrumb-cat').textContent = pin.cat.charAt(0).toUpperCase() + pin.cat.slice(1);
+    document.title = pin.name + ' - KatePin';
+
+    /* Populate thumbnails */
+    const thumbContainer = document.getElementById('gallery-thumb');
+    thumbContainer.innerHTML = `
+      <img src="${pin.img}" alt="Vista 1" class="thumb active" onclick="setMainImage(this.src)">
+      <img src="${pin.img}" alt="Vista 2" class="thumb" onclick="setMainImage(this.src)">
+    `;
+
+    /* Navigation arrows */
+    document.getElementById('prev-link').href = 'producto.html#id=' + prevPin.id;
+    document.getElementById('next-link').href = 'producto.html#id=' + nextPin.id;
+
+    /* Gallery */
+    const thumbs = document.querySelectorAll('.thumb');
+    const mainImg = document.getElementById('main-product-img');
+    let currentThumb = 0;
+
+    function setMainImage(src) {
+      mainImg.src = src;
+      thumbs.forEach(t => t.classList.remove('active'));
+      thumbs.forEach((t, i) => { if (t.src === src) { t.classList.add('active'); currentThumb = i; } });
+    }
+    function prevImage() { currentThumb = (currentThumb - 1 + thumbs.length) % thumbs.length; setMainImage(thumbs[currentThumb].src); }
+    function nextImage() { currentThumb = (currentThumb + 1) % thumbs.length; setMainImage(thumbs[currentThumb].src); }
+
+    /* Quantity */
+    let qty = 1;
+    function changeQty(delta) {
+      qty = Math.max(1, qty + delta);
+      document.getElementById('qty-display').textContent = qty;
+    }
+
+    /* Material buttons */
+    document.querySelectorAll('.material-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.material-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    /* Acabado swatches */
+    document.querySelectorAll('.acabado-swatch').forEach(sw => {
+      sw.addEventListener('click', () => {
+        document.querySelectorAll('.acabado-swatch').forEach(s => s.classList.remove('active'));
+        sw.classList.add('active');
+      });
+    });
+
+    /* Tabs */
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.target).classList.add('active');
+      });
+    });
+
+    /* Agregar al carrito */
+    document.getElementById('btn-add-cart').addEventListener('click', () => {
+      for(let i=0; i<qty; i++) {
+        addToCart(pin.id);
+      }
+    });
+  </script>
+
+</body>
+</html>

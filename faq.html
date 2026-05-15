@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes - KatePin</title>
+  <meta name="description" content="Encuentra respuestas a tus dudas sobre KatePin. Información sobre envíos, pagos y más.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📌</text></svg>">
+  <style>
+    .faq-wrapper {
+      padding: 120px 20px 100px;
+      background: var(--bg-color);
+      max-width: 1200px;
+      margin: 0 auto;
+      min-height: 80vh;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .faq-title {
+      font-family: 'Delius Swash Caps', cursive;
+      font-size: 2.8rem;
+      color: #4a3e59;
+      margin: 0;
+    }
+
+    .faq-cruz {
+      width: 70px; /* Cruces más grandes */
+      height: auto;
+    }
+
+    .faq-cruz.left {
+      transform: scaleX(-1); /* Invertida horizontalmente */
+    }
+
+    .faq-layout {
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+    }
+
+    /* Sidebar - Pills */
+    .faq-sidebar {
+      flex: 0 0 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .faq-pill {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 50px;
+      padding: 12px 25px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #6c5a81;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .faq-pill:hover {
+      border-color: #f86fad;
+      color: #f86fad;
+    }
+
+    .faq-pill.active {
+      border-color: #f86fad;
+      color: #6c5a81;
+      box-shadow: none;
+    }
+
+    /* Content Area - Accordion */
+    .faq-main {
+      flex: 1;
+      background: #fff;
+      border: 1px solid #89d5c9;
+      border-radius: 24px;
+      padding: 15px 40px 40px;
+      min-height: 500px;
+    }
+
+    .faq-content-section {
+      display: none;
+    }
+
+    .faq-content-section.active {
+      display: block;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #eee;
+      padding: 25px 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: flex-start; /* Flecha queda arriba si el texto es largo */
+      gap: 15px;
+      cursor: pointer;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #555;
+      transition: color 0.3s;
+      padding: 5px 0;
+    }
+
+    .faq-question:hover {
+      color: #f86fad;
+    }
+
+    .faq-question.open {
+      color: #f86fad;
+    }
+
+    .faq-triangle {
+      display: inline-block;
+      font-size: 1rem;
+      color: #ccc;
+      transition: all 0.3s ease;
+      margin-top: 4px;
+      transform: scaleX(1.6); /* Flechas un poco más anchas */
+    }
+
+    .faq-question.open .faq-triangle {
+      transform: scaleX(1.6);
+      color: #f86fad;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      padding-left: 35px;
+      padding-top: 10px;
+    }
+
+    .faq-answer p {
+      margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .faq-layout {
+        flex-direction: column;
+      }
+      .faq-sidebar {
+        flex: 1;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .faq-pill {
+        flex: 1 1 150px;
+      }
+      .faq-title {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <ul class="nav-left" role="menubar">
+        <li role="none" class="has-dropdown">
+          <a href="tienda.html" role="menuitem">Tienda ▾</a>
+          <ul class="dropdown-menu" role="menu">
+            <li role="none" class="has-submenu">
+              <a href="#" role="menuitem">Ropa ▸</a>
+              <ul class="dropdown-submenu" role="menu">
+                <li role="none"><a href="tienda.html#ropa-vestidos" role="menuitem">Vestidos</a></li>
+                <li role="none"><a href="tienda.html#ropa-chaquetas" role="menuitem">Chaquetas</a></li>
+                <li role="none"><a href="tienda.html#ropa-blusas" role="menuitem">Blusas</a></li>
+                <li role="none"><a href="tienda.html#ropa-pantalones" role="menuitem">Pantalones</a></li>
+                <li role="none"><a href="tienda.html#ropa-faldas" role="menuitem">Faldas</a></li>
+              </ul>
+            </li>
+            <li role="none" class="has-submenu">
+              <a href="#" role="menuitem">Accesorios ▸</a>
+              <ul class="dropdown-submenu" role="menu">
+                <li role="none"><a href="tienda.html#accesorios-pines" role="menuitem">Pines</a></li>
+              </ul>
+            </li>
+            <li role="none" class="has-submenu">
+              <a href="#" role="menuitem">Zapatos ▸</a>
+              <ul class="dropdown-submenu" role="menu">
+                <li role="none"><a href="tienda.html#zapatos-sandalias" role="menuitem">Sandalias</a></li>
+                <li role="none"><a href="tienda.html#zapatos-botas" role="menuitem">Botas</a></li>
+                <li role="none"><a href="tienda.html#zapatos-tenis" role="menuitem">Tenis</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li role="none"><a href="nosotros.html" role="menuitem">Nosotros</a></li>
+        <li role="none"><a href="contacto.html" role="menuitem">Contacto</a></li>
+      </ul>
+      <a href="index.html" class="logo" aria-label="KatePin - Inicio">
+        <img src="img/logo1.png" alt="KatePin" class="logo-img">
+      </a>
+      <div class="nav-right-group">
+        <ul class="nav-right" role="menubar">
+          <li role="none"><a href="faq.html" role="menuitem" style="color:var(--hot-pink);">FAQ</a></li>
+          <li role="none" class="has-dropdown">
+            <a href="#" role="menuitem">Cuenta ▾</a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="none"><a href="login.html" role="menuitem">Iniciar sesión</a></li>
+              <li role="none"><a href="registro.html" role="menuitem">Registrarme</a></li>
+              <li role="none"><a href="#" role="menuitem">Mensajes</a></li>
+              <li role="none"><a href="#" role="menuitem">Mis pedidos</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header-icons">
+          <button class="icon-btn" id="cart-btn" aria-label="Carrito"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-count" id="cart-count" style="display:none">0</span></button>
+          <a href="deseos.html" id="wishlist-btn" aria-label="Lista de deseos"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></a>
+          <button class="icon-btn" aria-label="Buscar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        </div>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menú">☰</button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="tienda.html">Tienda</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main class="faq-wrapper">
+    <div class="faq-header">
+      <img src="img/cruz.png" alt="" class="faq-cruz left">
+      <h1 class="faq-title">Preguntas frecuentes</h1>
+      <img src="img/cruz.png" alt="" class="faq-cruz">
+    </div>
+
+    <div class="faq-layout">
+      <!-- SIDEBAR -->
+      <aside class="faq-sidebar">
+        <div class="faq-pill active" data-target="general">Información general</div>
+        <div class="faq-pill" data-target="comprar">Cómo comprar</div>
+        <div class="faq-pill" data-target="pagos">Pagos</div>
+        <div class="faq-pill" data-target="envios">Envíos</div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <section class="faq-main">
+        
+        <!-- SECCIÓN: GENERAL -->
+        <div class="faq-content-section active" id="general">
+          <div class="faq-item">
+            <div class="faq-question open">
+              <span class="faq-triangle">▲</span>
+              ¿Qué es KatePin?
+            </div>
+            <div class="faq-answer" style="max-height: 100px;">
+              <p>Somos una tienda online colombiana dedicada a traer los mejores pines y accesorios de estilo Kawaii. Nos apasiona ofrecer productos únicos que añaden un toque de alegría y personalidad a tu outfit diario.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Tienen tienda física?
+            </div>
+            <div class="faq-answer">
+              <p>Actualmente operamos de forma 100% virtual para poder ofrecerte una mayor variedad de diseños a precios competitivos. Realizamos envíos rápidos y seguros a todas las ciudades de Colombia.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Los productos son iguales a las fotos?
+            </div>
+            <div class="faq-answer">
+              <p>¡Sí! Todas las fotos de nuestra web son de productos reales tomadas por nuestro equipo. Ten en cuenta que los colores pueden tener leves variaciones dependiendo del brillo y la configuración de tu pantalla.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Cómo puedo contactarlos?
+            </div>
+            <div class="faq-answer">
+              <p>Puedes escribirnos a nuestro WhatsApp oficial haciendo clic en el botón flotante de la página, o enviarnos un correo electrónico a hola@katepin.com. Estamos siempre atentos para ayudarte.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Venden al por mayor?
+            </div>
+            <div class="faq-answer">
+              <p>¡Claro que sí! Tenemos precios especiales para compras por volumen. Si estás interesado en vender nuestros pines, contáctanos por WhatsApp para enviarte nuestro catálogo mayorista.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN: COMPRAR -->
+        <div class="faq-content-section" id="comprar">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Cómo realizo un pedido?
+            </div>
+            <div class="faq-answer">
+              <p>Es muy fácil: elige tus pines favoritos, añádelos al carrito y haz clic en "Finalizar Compra". Luego completa tus datos de envío y elige tu método de pago preferido para completar la orden.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Necesito crear una cuenta para comprar?
+            </div>
+            <div class="faq-answer">
+              <p>No es obligatorio crear una cuenta, puedes realizar tu compra como invitado. Sin embargo, tener una cuenta te permite guardar favoritos y ver el historial de tus pedidos anteriores.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Puedo cambiar o cancelar mi pedido?
+            </div>
+            <div class="faq-answer">
+              <p>Sí, siempre y cuando el pedido no haya sido despachado. Te recomendamos comunicarte inmediatamente con nosotros por WhatsApp indicando tu número de orden para realizar cualquier cambio.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Tienen cupones de descuento?
+            </div>
+            <div class="faq-answer">
+              <p>¡Sí! Solemos compartir cupones especiales en nuestras redes sociales y boletines. Te invitamos a seguirnos en Instagram para estar al tanto de todas nuestras promociones y lanzamientos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN: PAGOS -->
+        <div class="faq-content-section" id="pagos">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Qué métodos de pago aceptan?
+            </div>
+            <div class="faq-answer">
+              <p>Para tu comodidad aceptamos Nequi, Daviplata y transferencias directas desde cualquier banco. Próximamente estaremos integrando pasarelas para pagos con tarjeta de crédito y PSE.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Cómo confirmo que mi pago fue exitoso?
+            </div>
+            <div class="faq-answer">
+              <p>Una vez realices la transferencia, envíanos el comprobante por WhatsApp junto con tu número de orden. Validaremos el pago en minutos y procederemos con el alistamiento de tu paquete.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Es seguro realizar el pago de esta forma?
+            </div>
+            <div class="faq-answer">
+              <p>Totalmente. Al manejar transferencias directas a nuestras cuentas oficiales, tu dinero está seguro. KatePin es una marca registrada y con cientos de clientes satisfechos en todo el país.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN: ENVIOS -->
+        <div class="faq-content-section" id="envios">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Cuánto tiempo tarda en llegar mi pedido?
+            </div>
+            <div class="faq-answer">
+              <p>El tiempo estimado de entrega es de 2 a 5 días hábiles a nivel nacional. Las ciudades principales como Bogotá o Medellín suelen recibir sus pedidos en aproximadamente 48 horas.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Cómo puedo rastrear mi pedido una vez enviado?
+            </div>
+            <div class="faq-answer">
+              <p>En cuanto tu paquete sea entregado a la transportadora, te enviaremos el número de guía por correo y WhatsApp. Con este número podrás seguir la ubicación de tus pines en tiempo real.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Qué sucede si no estoy presente para recibir el paquete?
+            </div>
+            <div class="faq-answer">
+              <p>La transportadora realizará hasta dos intentos de entrega adicionales. Si no logran entregarlo, el paquete será devuelto a nuestra oficina y coordinaremos contigo un nuevo envío.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-triangle">▼</span>
+              ¿Llegan a zonas rurales o veredas?
+            </div>
+            <div class="faq-answer">
+              <p>Sí, realizamos envíos a todo el territorio nacional donde las empresas de mensajería tengan cobertura. Si tienes dudas sobre tu zona, consúltanos por WhatsApp antes de comprar.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-wave">
+      <img src="img/footer.png" alt="" aria-hidden="true" class="footer-wave-img">
+    </div>
+    <div class="footer-content">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="img/logo1.png" alt="KatePin" class="footer-logo-img">
+          <p class="footer-copy-text">&copy; 2026 KatePin<br>Todos los derechos<br>reservados.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Sobre nosotros</h4>
+          <a href="nosotros.html">Quiénes somos</a>
+          <a href="faq.html">FAQ</a>
+          <a href="#">Envíos a toda Colombia</a>
+          <img src="img/nequi.png" alt="Nequi" style="height:22px; margin-top:12px; filter:brightness(0) invert(1);">
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="tel:+573136655918">313 665 5918</a>
+          <a href="#">Escríbenos y síguenos</a>
+          <div class="footer-social">
+            <a href="https://facebook.com/katepin" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com/katepin" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://tiktok.com/@katepin" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.11V9a6.33 6.33 0 00-.79-.05A6.34 6.34 0 003.15 15.3a6.34 6.34 0 0010.86-4.43V7.56a8.28 8.28 0 004.86 1.57V5.68a4.84 4.84 0 01-.72-.05l-.56.06z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Boletín</h4>
+          <p class="footer-boletin-desc">Entérate de nuestras novedades, recibe cupones, artículos y ¡mucho más!</p>
+          <form class="newsletter-input" id="newsletter-form">
+            <input type="email" placeholder="dirección de e-mail" required aria-label="Email">
+            <button type="submit">Suscribir</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Tab functionality
+    const pills = document.querySelectorAll('.faq-pill');
+    const sections = document.querySelectorAll('.faq-content-section');
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const target = pill.getAttribute('data-target');
+        
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        sections.forEach(sec => {
+          sec.classList.remove('active');
+          if(sec.id === target) sec.classList.add('active');
+        });
+      });
+    });
+
+    // Accordion functionality
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        const isOpen = q.classList.contains('open');
+
+        // Close all other questions in the same section
+        const section = q.closest('.faq-content-section');
+        section.querySelectorAll('.faq-question').forEach(otherQ => {
+          if(otherQ !== q) {
+            otherQ.classList.remove('open');
+            otherQ.nextElementSibling.style.maxHeight = null;
+            otherQ.querySelector('.faq-triangle').textContent = '▼';
+          }
+        });
+
+        if(isOpen) {
+          q.classList.remove('open');
+          answer.style.maxHeight = null;
+          q.querySelector('.faq-triangle').textContent = '▼';
+        } else {
+          q.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          q.querySelector('.faq-triangle').textContent = '▲';
+        }
+      });
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    if(menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>

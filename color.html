@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img id="logo" src="img/logo1.png" style="display:none;" />
+<canvas id="canvas" style="display:none;"></canvas>
+<script>
+  window.onload = function() {
+    const img = document.getElementById('logo');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage(img, 0, 0);
+    const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+    const colors = {};
+    for (let i = 0; i < data.length; i += 4) {
+      if (data[i+3] < 128) continue; // transparent
+      const rgb = `${data[i]},${data[i+1]},${data[i+2]}`;
+      if (rgb === "255,255,255" || rgb === "0,0,0") continue; // skip white/black
+      colors[rgb] = (colors[rgb] || 0) + 1;
+    }
+    let max = 0;
+    let dominant = null;
+    for (const color in colors) {
+      if (colors[color] > max) {
+        max = colors[color];
+        dominant = color;
+      }
+    }
+    const [r, g, b] = dominant.split(',');
+    const hex = "#" + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1);
+    console.log("DOMINANT COLOR: " + hex);
+  };
+</script>
+</body>
+</html>
